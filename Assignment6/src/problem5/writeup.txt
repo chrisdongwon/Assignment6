@@ -1,0 +1,14 @@
+We simply count the number of calls to assignment operator when filling in the
+returning array. The number is the same as the length of the returning array
+as we only assign values once per element in the array. The input to the model
+is the length of the returning array, which is the sum of lengths of arr1 and
+arr2. Let n represent the length of the returning array. The complexity model
+is defined as: T(n) = n, where n > 0. T is trivially of O(n). 
+
+This procedure is not recursive, so it should only occupy a constant amount of
+memory in stack. 'new' keyword is used to create the returning array, where the
+length depends on the lengths of arr1 and arr2. We have O(1) for stack and
+O(n) for heap. Since O(n) dominates, we conclude that the space complexity
+model is of O(n).
+
+I think time complexity and space complexity are independent.

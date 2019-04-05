@@ -1,0 +1,17 @@
+Worst case complexity is when the last element of dubs is within eps from d,
+or there is no element in dubs with the aforementioned condition. 
+
+We count the number of calls to 'abs(dubs[i] - d) < eps', which is same as the
+number of iterations in the for-loop. Hence, the complexity of this procedure
+depends on the number of elements in the array, independent of eps and d.
+We conclude that this model is of linear complexity.
+
+The time complexity model is the following:
+Let T(n) = n, where n > 0
+
+For the worst case, n comparisons must be made in order to see if the last
+element satisfies the epsilon-neighborhood criterion. 
+
+T is of O(n) with c = 1 and x_0 = 0.
+Then, for all x >= 0, we have |T(x)| <= 1*|x|, which simplifies to x = x,
+a true statement. Hence, T is of O(n) by definition.

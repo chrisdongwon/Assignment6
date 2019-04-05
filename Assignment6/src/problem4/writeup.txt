@@ -1,0 +1,21 @@
+We count the number of of calls to '+=', the concatenation operator.
+Let k be the length of the array, and let n be n as described in the problem
+statement. The input will be the total number of strings that need to be
+appended, more specifically, k * n strings.
+
+The complexity model is defined by:
+T(m) = m, where m >= 0 and k,n divide m.
+
+By assuming that concatenation is a constant time operation, we can only say
+that the model is of linear complexity.
+
+Now, suppose that concatenation of strings of length n,m is of O(n+m). 
+Since concatenation is no longer constant-time, the analysis should change
+with the new information. By traversing over the building string, the number of
+calls to concatenate should be like the summation of natural numbers from 1 to
+n: n(n+1)/2. Hence, we see that the complexity worsens to at least quadratic
+time. 
+
+
+
+

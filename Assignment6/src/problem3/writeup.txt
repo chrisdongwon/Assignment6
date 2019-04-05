@@ -1,0 +1,6 @@
+For an array of length n, there will be n^2 pairs, hence this is of quadratic
+complexity. We count the number of calls to the constructor of class
+IntPair. Then, we have the following complexity model:
+T(n) = n * n, where n > 0.
+
+T is trivially of O(n^2) with c = 1 and x_0 = 1.

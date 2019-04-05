@@ -1,0 +1,24 @@
+Suppose that y is a power of two. The provided identities tell us that y is
+halved when y is even, and y is decremented by 1 otherwise. Hence, we see that
+we reach the base case by either dividing or subtracting y. We will count the
+number of times in which the 'y' parameter will be reduced (equivalently, the
+number of recursive calls). 
+
+When y = 0, we already have the base case, thus T(0) = 0.
+When y = 1 = 2^0, we subtract 1 from y as y is odd, so T(1) = 1.
+Otherwise, y is even as it is a power of two, and the next recursive call will
+have y / 2 as the replacing parameter. Hence, T(n) = T(n / 2) + 1, provided n
+is a power of 2 greater than 1. Let n = 2^k for some natural number k. Then,
+the equivalent relation is T(2^k) = T(2^(k-1)) + 1, and by substitution, we see
+that T(2^k) = T(2^(k-1)) + 1 = T(2^(k-2)) + 2 = ... = T(2^0) + k = 1 + k.
+
+Thus, the explicit formula for the complexity is given by:
+T(0) = 0
+T(2^k) = k + 1, where k >= 0.
+
+From n = 2^k, we have k = log_2(n), and it follows that:
+T(n) = log_2(n) + 1, where n is a power of 2.
+
+T is of O(log_2(n)) by taking c = 2 and x_0 = 4. Then, for all x >= 4, we have
+log_2(x) > 1, thus we get 2 log_2(x) > log_2(x) + 1 = T(x). Hence, T is of
+O(log_2(n)) by definition. 
